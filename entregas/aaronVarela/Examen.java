@@ -4,6 +4,7 @@ class ClaseJava {
         System.out.println("Examen Parcial PRG1");
         Scanner scanner = new Scanner(System.in);
         int edadAlumno;
+        int asignaturasMatriculadas;
         final int EDADMINIMA = 17;
         final int EDADMAXIMA = 77;
         edadAlumno = scanner.nextInt();
@@ -11,5 +12,6 @@ class ClaseJava {
             System.out.println("Edad no válida, ingrese nuevamente");
             edadAlumno = scanner.nextInt();
         }
+        asignaturasMatriculadas = scanner.nextInt();
     }
 }

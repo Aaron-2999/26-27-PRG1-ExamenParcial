@@ -5,6 +5,7 @@ class ClaseJava {
         Scanner scanner = new Scanner(System.in);
         int edadAlumno;
         int asignaturasMatriculadas;
+        int notas;
         final int ASIGNATURASMINIMAS = 1;
         final int ASIGNATURASMAXIMAS = 10;
         final int EDADMINIMA = 17;
@@ -20,6 +21,10 @@ class ClaseJava {
         while (asignaturasMatriculadas < ASIGNATURASMINIMAS || asignaturasMatriculadas > ASIGNATURASMAXIMAS) {
             System.out.println("Número de asignaturas no válido, ingrese nuevamente");
             asignaturasMatriculadas = scanner.nextInt();
+        }
+        for (int i = 1; i <= asignaturasMatriculadas; i++) {
+            System.out.println("Ingrese nota " + i);
+            int notas = scanner.nextInt();
         }
     }
 }

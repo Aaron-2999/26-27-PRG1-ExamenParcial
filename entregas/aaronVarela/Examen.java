@@ -21,24 +21,28 @@ class ClaseJava {
             System.out.println("Número de asignaturas no válido, ingrese nuevamente");
             asignaturasMatriculadas = scanner.nextInt();
         }
-        int nota1 = 0;
-        int nota2 = 0;
-        int nota3 = 0;
-        int nota4 = 0;
-        int nota5 = 0;
-        int nota6 = 0;
-        int nota7 = 0;
-        int nota8 = 0;
-        int nota9 = 0;
-        int nota10 = 0;
+        double nota1 = 0;
+        double nota2 = 0;
+        double nota3 = 0;
+        double nota4 = 0;
+        double nota5 = 0;
+        double nota6 = 0;
+        double nota7 = 0;
+        double nota8 = 0;
+        double nota9 = 0;
+        double nota10 = 0;
         double mediaNotas;
         int aprobadas = 0;
         int suspendidas = 0;
-        int notaParaAprobar = 5;
+        double notaParaAprobar = 5;
         for (int i = 1; i <= asignaturasMatriculadas; i++) {
             System.out.println("Ingrese nota " + i);
             if (i == 1) {
                 nota1 = scanner.nextInt();
+                while (nota1 < 0 || nota1 > 10) {
+                    System.out.println("Nota no válida, ingrese nuevamente");
+                    nota1 = scanner.nextInt();
+                }
                 if (nota1 >= notaParaAprobar) {
                     aprobadas++;
                 }else {
@@ -46,34 +50,32 @@ class ClaseJava {
                 }
             } else if (i == 2) {
                 nota2 = scanner.nextInt();
-                if (nota2 >= notaParaAprobar) {
-                    aprobadas++;
-                }else {
-                    suspendidas++;
+                while (nota2 < 0 || nota2 > 10) {
+                    System.out.println("Nota no válida, ingrese nuevamente");
+                    nota2 = scanner.nextInt();
                 }
-            } else if (i == 3) {
-                nota3 = scanner.nextInt();
-                if (nota3 >= notaParaAprobar) {
+                if (nota2 >= notaParaAprobar) {
                     aprobadas++;
                 }else {
                     suspendidas++;
                 }
             } else if (i == 4) {
                 nota4 = scanner.nextInt();
-                if (nota4 >= notaParaAprobar) {
-                    aprobadas++;
-                }else {
-                    suspendidas++;
+                while (nota4 < 0 || nota4 > 10) {
+                    System.out.println("Nota no válida, ingrese nuevamente");
+                    nota4 = scanner.nextInt();
                 }
-            } else if (i == 5) {
-                nota5 = scanner.nextInt();
-                if (nota5 >= notaParaAprobar) {
+                if (nota4 >= notaParaAprobar) {
                     aprobadas++;
                 }else {
                     suspendidas++;
                 }
             } else if (i == 6) {
                 nota6 = scanner.nextInt();
+                while (nota6 < 0 || nota6 > 10) {
+                    System.out.println("Nota no válida, ingrese nuevamente");
+                    nota6 = scanner.nextInt();
+                }
                 if (nota6 >= notaParaAprobar) {
                     aprobadas++;
                 }else {
@@ -81,6 +83,10 @@ class ClaseJava {
                 }
             } else if (i == 7) {
                 nota7 = scanner.nextInt();
+                while (nota7 < 0 || nota7 > 10) {
+                    System.out.println("Nota no válida, ingrese nuevamente");
+                    nota7 = scanner.nextInt();
+                }
                 if (nota7 >= notaParaAprobar) {
                     aprobadas++;
                 }else {
@@ -88,20 +94,21 @@ class ClaseJava {
                 }
             } else if (i == 8) {
                 nota8 = scanner.nextInt();
-                if (nota8 >= notaParaAprobar) {
-                    aprobadas++;
-                }else {
-                    suspendidas++;
+                while (nota8 < 0 || nota8 > 10) {
+                    System.out.println("Nota no válida, ingrese nuevamente");
+                    nota8 = scanner.nextInt();
                 }
-            } else if (i == 9) {
-                nota9 = scanner.nextInt();
-                if (nota9 >= notaParaAprobar) {
+                if (nota8 >= notaParaAprobar) {
                     aprobadas++;
                 }else {
                     suspendidas++;
                 }
             } else if (i == 10) {
                 nota10 = scanner.nextInt();
+                while (nota10 < 0 || nota10 > 10) {
+                    System.out.println("Nota no válida, ingrese nuevamente");
+                    nota10 = scanner.nextInt();
+                }
                 if (nota10 >= notaParaAprobar) {
                     aprobadas++;
                 }else {

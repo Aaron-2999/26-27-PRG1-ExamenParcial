@@ -5,5 +5,10 @@ class ClaseJava {
         Scanner scanner = new Scanner(System.in);
         int edadAlumno;
         edadAlumno = scanner.nextInt();
+        if (edadAlumno >= 18) {
+            System.out.println("Es mayor de edad");
+        } else {
+            System.out.println("Es menor de edad");
+        }
     }
 }

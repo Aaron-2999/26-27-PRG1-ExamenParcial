@@ -70,24 +70,58 @@ class ClaseJava {
                 if (nota2 < notaMasBaja) {
                     notaMasBaja = nota2;
                 }
-            } else if (i == 4) {
-                nota4 = scanner.nextInt();
-                while (nota4 < 0 || nota4 > 10) {
+                 }else if (i == 3) {
+                    nota3 = scanner.nextInt();
+                    while (nota3 < 0 || nota3 > 10) {
                     System.out.println("Nota no válida, ingrese nuevamente");
+                    nota3 = scanner.nextInt();
+                    }
+                    if (nota3 >= notaParaAprobar) {
+                    aprobadas++;
+                    }else {
+                    suspendidas++;
+                    }
+                    if (nota3 > notaMasAlta) {
+                    notaMasAlta = nota3;
+                    }
+                    if (nota3 < notaMasBaja) {
+                    notaMasBaja = nota3;
+                    }
+                else if (i == 4) {
                     nota4 = scanner.nextInt();
+                    while (nota4 < 0 || nota4 > 10) {
+                        System.out.println("Nota no válida, ingrese nuevamente");
+                        nota4 = scanner.nextInt();
+                    }
+                    if (nota4 >= notaParaAprobar) {
+                        aprobadas++;
+                    }else {
+                        suspendidas++;
+                    }
+                    if (nota4 > notaMasAlta) {
+                        notaMasAlta = nota4;
+                    }
+                    if (nota4 < notaMasBaja) {
+                        notaMasBaja = nota4;
+                    }
+                }else if (i == 5) {
+                nota5 = scanner.nextInt();
+                while (nota5 < 0 || nota5 > 10) {
+                    System.out.println("Nota no válida, ingrese nuevamente");
+                    nota5 = scanner.nextInt();
                 }
-                if (nota4 >= notaParaAprobar) {
+                if (nota5 >= notaParaAprobar) {
                     aprobadas++;
                 }else {
                     suspendidas++;
                 }
-                if (nota4 > notaMasAlta) {
-                    notaMasAlta = nota4;
+                if (nota5 > notaMasAlta) {
+                    notaMasAlta = nota5;
                 }
-                if (nota4 < notaMasBaja) {
-                    notaMasBaja = nota4;
+                if (nota5 < notaMasBaja) {
+                    notaMasBaja = nota5;
                 }
-            } else if (i == 6) {
+             else if (i == 6) {
                 nota6 = scanner.nextInt();
                 while (nota6 < 0 || nota6 > 10) {
                     System.out.println("Nota no válida, ingrese nuevamente");
@@ -104,7 +138,7 @@ class ClaseJava {
                 if (nota6 < notaMasBaja) {
                     notaMasBaja = nota6;
                 }
-            } else if (i == 7) {
+            }  else if (i == 7) {
                 nota7 = scanner.nextInt();
                 while (nota7 < 0 || nota7 > 10) {
                     System.out.println("Nota no válida, ingrese nuevamente");
@@ -138,7 +172,24 @@ class ClaseJava {
                 if (nota8 < notaMasBaja) {
                     notaMasBaja = nota8;
                 }
-            } else if (i == 10) {
+            }else if (i == 9) {
+                nota9 = scanner.nextInt();
+                while (nota9 < 0 || nota9 > 10) {
+                    System.out.println("Nota no válida, ingrese nuevamente");
+                    nota9 = scanner.nextInt();
+                }
+                if (nota9 >= notaParaAprobar) {
+                    aprobadas++;
+                }else {
+                    suspendidas++;
+                }
+                if (nota9 > notaMasAlta) {
+                    notaMasAlta = nota9;
+                }
+                if (nota9 < notaMasBaja) {
+                    notaMasBaja = nota9;
+                }
+             else if (i == 10) {
                 nota10 = scanner.nextInt();
                 while (nota10 < 0 || nota10 > 10) {
                     System.out.println("Nota no válida, ingrese nuevamente");
@@ -164,5 +215,10 @@ class ClaseJava {
         System.out.println("Número de asignaturas suspendidas: " + suspendidas);
         System.out.println("La nota más alta es: " + notaMasAlta);
         System.out.println("La nota más baja es: " + notaMasBaja);
+        if (mediaNotas >= notaParaAprobar) {
+            System.out.println("El alumno promociona");
+        } else {
+            System.out.println("El alumno no promociona");
+        }
     }
 }

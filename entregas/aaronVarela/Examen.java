@@ -33,57 +33,79 @@ class ClaseJava {
         int nota10 = 0;
         double mediaNotas;
         int aprobadas = 0;
+        int suspendidas = 0;
+        int notaParaAprobar = 5;
         for (int i = 1; i <= asignaturasMatriculadas; i++) {
             System.out.println("Ingrese nota " + i);
             if (i == 1) {
                 nota1 = scanner.nextInt();
-                if (nota1 >= 5) {
+                if (nota1 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             } else if (i == 2) {
                 nota2 = scanner.nextInt();
-                if (nota2 >= 5) {
+                if (nota2 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             } else if (i == 3) {
                 nota3 = scanner.nextInt();
-                if (nota3 >= 5) {
+                if (nota3 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             } else if (i == 4) {
                 nota4 = scanner.nextInt();
-                if (nota4 >= 5) {
+                if (nota4 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             } else if (i == 5) {
                 nota5 = scanner.nextInt();
-                if (nota5 >= 5) {
+                if (nota5 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             } else if (i == 6) {
                 nota6 = scanner.nextInt();
-                if (nota6 >= 5) {
+                if (nota6 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             } else if (i == 7) {
                 nota7 = scanner.nextInt();
-                if (nota7 >= 5) {
+                if (nota7 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             } else if (i == 8) {
                 nota8 = scanner.nextInt();
-                if (nota8 >= 5) {
+                if (nota8 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             } else if (i == 9) {
                 nota9 = scanner.nextInt();
-                if (nota9 >= 5) {
+                if (nota9 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             } else if (i == 10) {
                 nota10 = scanner.nextInt();
-                if (nota10 >= 5) {
+                if (nota10 >= notaParaAprobar) {
                     aprobadas++;
+                }else {
+                    suspendidas++;
                 }
             }
             
@@ -91,5 +113,6 @@ class ClaseJava {
         mediaNotas = (double) (nota1 + nota2 + nota3 + nota4 + nota5 + nota6 + nota7 + nota8 + nota9 + nota10) / asignaturasMatriculadas;
         System.out.println("La media de las notas es: " + mediaNotas);
         System.out.println("Número de asignaturas aprobadas: " + aprobadas);
+        System.out.println("Número de asignaturas suspendidas: " + suspendidas);
     }
 }
